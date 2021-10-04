@@ -19,7 +19,6 @@ int main(int argc, char *argv[]) {
 	int digit;
 	while (testcase!=0)
 	{
-		/* code */
 		digit = testcase % 10;
 		printf(" %d",digit);
 		testcase = (testcase-digit)/10;

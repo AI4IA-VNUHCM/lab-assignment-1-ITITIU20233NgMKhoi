@@ -26,30 +26,23 @@ int main(int argc, char *argv[]) {
 			testcase[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-int main()
-{
-    int a[1000],i,n,min,max;
-   
-    printf("Enter size of the array : ");
-    scanf("%d",&n);
- 
-    printf("Enter integers of array : ");
-    for(i=0; i<n; i++)
-    {
-        scanf("%d",&a[i]);
-    }
- 
-    min=max=a[0];
-    for(i=1; i<n; i++)
-    {
-         if(min>a[i])
-		  min=a[i];   
-		   if(max<a[i])
-		    max=a[i];       
-    }
-     printf("minimum of array is : %d",min);
-          printf("\nmaximum of array is : %d",max);
- 
+    int min = testcase[0];
+	int max = testcase[0];
+	for (int i = 0; i < argc; i++)
+	{
+		if (testcase[i] > max)
+		{
+			max = testcase[i];
+		}
+
+		
+		if (testcase[i] < min)
+		{
+			min = testcase[i];
+		}
+	}
+	printf("Max: %d\n", max);
+	printf("Min: %d\n", min);
  
     return 0;
 }
